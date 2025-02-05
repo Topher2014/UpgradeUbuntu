@@ -1,8 +1,8 @@
-if (multipass info mythical-vm)
+if (multipass info magical-vm)
  then
   echo "The VM already exists"
  else
-  echo "✨🔮 Creating a mythical vm  for you. One moment...🪄🧙‍"
-  multipass launch core18 --name mythical-vm
-  multipass info mythical-vm
+  echo "✨‍‍🧙‍ Creating a magical vm  for you. One moment...🪄✨‍‍"
+  multipass launch core18 --name magical-vm
+  multipass info magical-vm
 fi
