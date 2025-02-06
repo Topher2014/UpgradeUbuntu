@@ -4,21 +4,21 @@
 
 # 1
 To start the project on a Mac run:
-bash installVm-mac.sh 
+`bash setup-mac.sh' 
 
 To start project on linux run:
-`bash installVm-linux.sh`
+`bash setup-linux.sh`
 
 # 2
 To transfer file from local to vm, cd to UpgradeUbuntu and run the following command:
-`multipass transfer ENTER FILE NAME HERE then NAME OF VM then /home/ubuntu/ then without spaces ENTER FILE NAME AGAIN`
+`multipass transfer create-vm.sh magical-vm:/home/ubuntu/create-vm.sh`
 
 # 3
 To install an older version of Ubuntu in the VM shell into your multipass VM and run the  script: 
-`multipass shell ENTER VM NAME`
+`multipass shell magical-vm`
 
 Inside the vm run 
-`bash ENTER FILE NAME`
+`bash create-vm.sh`
 
 # Additional Info
 To delete all VM's created with multipass run:
