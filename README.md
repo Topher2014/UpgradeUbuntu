@@ -4,7 +4,7 @@
 
 # 1
 To start the project on a Mac run:
-`bash setup-mac.sh' 
+`bash setup-mac.sh` 
 
 To start project on linux run:
 `bash setup-linux.sh`
