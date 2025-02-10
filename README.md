@@ -11,7 +11,7 @@ To start project on linux run:
 
 # 2
 To transfer file from local to vm, cd to UpgradeUbuntu and run the following command:
-`multipass transfer create-vm.sh then magical-vm then /home/ubuntu/ then without spaces create-vm.sh`
+`multipass transfer create-vm.sh magical-vm:/home/ubuntu/create-vm.sh`
 
 # 3
 To install an older version of Ubuntu in the VM shell into your multipass VM and run the  script: 
