@@ -18,7 +18,7 @@ To install an older version of Ubuntu in the VM shell into your multipass VM and
 `multipass shell magical-vm`
 
 Inside the vm run 
-`bash create-vm.sh`
+`bash UpgradeUbuntu.sh`
 
 # Additional Info
 To delete all VM's created with multipass run:
@@ -29,7 +29,6 @@ To remove multipass from your linuxmint machine run:
 
 To remove multipass from your Mac machine run:
 `brew uninstall --zap multipass`
-
 
 
 What we aim to do is:
