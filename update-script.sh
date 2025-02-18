@@ -10,11 +10,11 @@ else
 fi  
 
 # Check if a reboot is required
-if [ ! -f /var/run/reboot-required ]  
+if [  -f /var/run/reboot-required ]  
 then  
-  echo "No reboot required"
-else  
   echo "System upgrade completed. Rebooting now"
   sudo reboot
+else
+  echo 'No reboot required'  
 fi
 
