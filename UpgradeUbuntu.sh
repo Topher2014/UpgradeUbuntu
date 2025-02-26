@@ -10,12 +10,14 @@ else
   sudo apt update && sudo apt upgrade -y
 fi  
 
-# Check if a reboot is required
-if [  -f /var/run/reboot-required ]  
-then  
-  echo "System upgrade completed. Rebooting now"
-  sudo reboot
-else
-  echo 'No reboot required'  
-fi
+# Check if a reboot is required by continuously checking for the file
+echo "Checking if a reboot is required..."
+while [ ! -f /var/run/reboot-required ]  
+do  
+  echo "No reboot required yet. Still checking..."
+done
 
+echo "System upgrade completed. Rebooting now..."
+
+# Reboot the system
+sudo reboot
