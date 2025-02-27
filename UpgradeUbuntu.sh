@@ -7,17 +7,16 @@ then
 else  
   echo "Ubuntu version is lower than required (22.04). Updating system"  
   sudo apt update && sudo apt upgrade -y
-
-  echo "System update completed. Rebooting now"
-  sudo reboot
 fi  
 
-# After reboot, wait for the VM state to be "Running"
-echo "Waiting for VM to complete reboot"
-while [ "$(multipass list | awk '/magical-vm/ {print $2}')" != "Running" ]  
-do  
-  echo "VM is still restarting"
-done
+if [ ! -f /var/run/reboot-required ]
+then
+  echo "Reboot not required."
+else
+  echo "Reboot required, rebooting now."
+  sudo reboot
+fi
 
-echo "VM rebooted successfully"
+
+
 
