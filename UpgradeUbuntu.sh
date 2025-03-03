@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Ensure the script is scheduled in cron
+if  crontab -l | grep -q "@reboot /home/ubuntu/UpgradeUbuntu.sh"  
+then  
+  echo "Cron job is scheduled"
+else
+  echo "Adding script to cron for auto-execution after reboot"
+  (crontab -l; echo "@reboot /home/ubuntu/UpgradeUbuntu.sh") | crontab -
+fi
+
 # The newest version should exist and the package list should be updated
 if grep -q 'VERSION_ID="22.04"' /etc/os-release  
 then  
@@ -13,10 +22,6 @@ if [ ! -f /var/run/reboot-required ]
 then
   echo "Reboot not required."
 else
-  echo "Reboot required, rebooting now."
+  echo "Reboot required, rebooting now"
   sudo reboot
 fi
-
-
-
-
