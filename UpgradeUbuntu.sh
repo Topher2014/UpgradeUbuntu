@@ -14,7 +14,7 @@ fi
 if sudo apt list --upgradable | grep 'upgradable' && grep 'VERSION_ID="' /etc/os-release  
 then  
   echo "No updates needed. System is up to date"
-  grep 'VERSION_ID="' /etc/os-release'
+  grep 'VERSION_ID="' /etc/os-release
 else  
   echo "Updates available or system version not detected. Running apt update and upgrade"
   sudo apt update && sudo apt upgrade -y
