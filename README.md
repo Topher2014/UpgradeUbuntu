@@ -11,11 +11,9 @@ To start project on linux run:
 
 # 2
 To transfer file from local to vm, cd to UpgradeUbuntu and run the following command:
-`multipass transfer UpgradeUbuntu.sh magical-vm:/home/ubuntu/UpgradeUbuntu.sh`
+`multipass transfer UpgradeUbuntu.sh magical-vm:/home/ubuntu/UpgradeUbuntu.sh && multipass exec magical-vm -- chmod +x /home/ubuntu/UpgradeUbuntu.sh`
 
-  # a To make script executable inside the vm, run:
-      `multipass exec magical-vm -- chmod +x /home/ubuntu/UpgradeUbuntu.sh`
-  # b To run the script from outside the vm, run:
+  # a To run the script from outside the vm, run:
       `multipass exec magical-vm -- /home/ubuntu/UpgradeUbuntu`
 
 # 3
