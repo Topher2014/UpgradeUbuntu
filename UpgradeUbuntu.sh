@@ -6,7 +6,7 @@ then
   echo "Cron job is scheduled"
 else
   echo "Adding script to cron for auto-execution after reboot"
-  (crontab -l; echo "@reboot /home/ubuntu/UpgradeUbuntu.sh") | crontab -
+  (crontab -l; echo "@reboot /home/ubuntu/UpgradeUbuntu.sh > /home/ubuntu/upgrade_log.txt 2>&1") | crontab -
 fi
 
 # The newest version should exist and the package list should be updated
